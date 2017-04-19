@@ -119,6 +119,7 @@ namespace coolpuppy24.commandlogger
 
         protected override void Unload()
         {
+            UnturnedPlayerEvents.OnPlayerChatted -= UnturnedPlayerEvents_OnPlayerChatted;
             Rocket.Core.Logging.Logger.Log("Unload");
         }
     }
