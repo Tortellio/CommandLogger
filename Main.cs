@@ -41,9 +41,10 @@ namespace coolpuppy24.commandlogger
             Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log Vehicle Command: " + Configuration.Instance.LogVehicleCommand);
             Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log TP Command: " + Configuration.Instance.LogTPCommand);
             Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log Teleport Command: " + Configuration.Instance.LogTeleportCommand);
-            Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log Spy Command: " + Configuration.Instance.LogVanishCommand);
+            Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log Spy Command: " + Configuration.Instance.LogSpyCommand);
             Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log TPHere Command: " + Configuration.Instance.LogTPHereCommand);
             Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log Investigate Command: " + Configuration.Instance.LogInvestigateCommand);
+            Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log Kill Command: " + Configuration.Instance.LogKillCommand);
             Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log Ban Command: " + Configuration.Instance.LogBanCommand);
             Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Log Kick Command: " + Configuration.Instance.LogKickCommand);
             Rocket.Core.Logging.Logger.Log("[CommandLogger] Successfully Loaded!");
@@ -100,6 +101,10 @@ namespace coolpuppy24.commandlogger
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
             if (message.StartsWith("/ban") && Configuration.Instance.LogBanCommand)
+            {
+                File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
+            }
+            if (message.StartsWith("/kill") && Configuration.Instance.LogBanCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }

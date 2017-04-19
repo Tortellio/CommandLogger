@@ -20,6 +20,7 @@ namespace coolpuppy24.commandlogger
         public bool LogSpyCommand;
         public bool LogTPHereCommand;
         public bool LogInvestigateCommand;
+        public bool LogKillCommand;
         public bool LogBanCommand;
         public bool LogKickCommand;
 
@@ -36,7 +37,8 @@ namespace coolpuppy24.commandlogger
             LogTeleportCommand = true;
             LogSpyCommand = true;
             LogTPHereCommand = true;
-            LogInvestigateCommand = true;
+            LogInvestigateCommand = false;
+            LogKillCommand = true;
             LogBanCommand = true;
             LogKickCommand = true;
         }
