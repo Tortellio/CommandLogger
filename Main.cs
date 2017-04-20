@@ -26,9 +26,15 @@ namespace coolpuppy24.commandlogger
         protected override void Load()
         {
             Instance = this;
-
-            System.IO.File.Create(CommandLogger).Close();
-
+            if (File.Exists(CommandLogger))
+            {
+                Rocket.Core.Logging.Logger.Log("[CommandLogger] File Exists, Not Overriding...");
+            } else
+            {
+                Rocket.Core.Logging.Logger.Log("[CommandLogger] CommandLog.txt Not Found! Creating new file...");
+                System.IO.File.Create(CommandLogger).Close();
+            }
+            
             UnturnedPlayerEvents.OnPlayerChatted += UnturnedPlayerEvents_OnPlayerChatted;
             Rocket.Core.Logging.Logger.LogWarning("[CommandLogger] Made by: Coolpuppy24");
             Rocket.Core.Logging.Logger.LogWarning("----------------------------------------------");
