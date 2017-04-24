@@ -62,11 +62,11 @@ namespace coolpuppy24.commandlogger
             if (message.StartsWith("/vanish") && Configuration.Instance.LogVanishCommand) {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/i") && Configuration.Instance.LogVanishCommand)
+            if (message.StartsWith("/i ") && Configuration.Instance.LogVanishCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/give") && Configuration.Instance.LogGiveCommand)
+            if (message.StartsWith("/give ") && Configuration.Instance.LogGiveCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
@@ -74,47 +74,47 @@ namespace coolpuppy24.commandlogger
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/v") && Configuration.Instance.LogVCommand)
+            if (message.StartsWith("/v ") && Configuration.Instance.LogVCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/vehicle") && Configuration.Instance.LogVehicleCommand)
+            if (message.StartsWith("/vehicle ") && Configuration.Instance.LogVehicleCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/item") && Configuration.Instance.LogItemCommand)
+            if (message.StartsWith("/item ") && Configuration.Instance.LogItemCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/tp") && Configuration.Instance.LogTPCommand)
+            if (message.StartsWith("/tp ") && Configuration.Instance.LogTPCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/teleport") && Configuration.Instance.LogTeleportCommand)
+            if (message.StartsWith("/teleport ") && Configuration.Instance.LogTeleportCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/spy") && Configuration.Instance.LogSpyCommand)
+            if (message.StartsWith("/spy ") && Configuration.Instance.LogSpyCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/tphere") && Configuration.Instance.LogTPHereCommand)
+            if (message.StartsWith("/tphere ") && Configuration.Instance.LogTPHereCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/investigate") && Configuration.Instance.LogInvestigateCommand)
+            if (message.StartsWith("/investigate ") && Configuration.Instance.LogInvestigateCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/ban") && Configuration.Instance.LogBanCommand)
+            if (message.StartsWith("/ban ") && Configuration.Instance.LogBanCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/kill") && Configuration.Instance.LogBanCommand)
+            if (message.StartsWith("/kill ") && Configuration.Instance.LogBanCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
-            if (message.StartsWith("/kick") && Configuration.Instance.LogKickCommand)
+            if (message.StartsWith("/kick ") && Configuration.Instance.LogKickCommand)
             {
                 File.AppendAllText(CommandLogger, "[" + DateTime.Now + "] " + player.CharacterName + " (" + player.CSteamID + ")" + ": \"" + message + "\"" + System.Environment.NewLine);
             }
