@@ -5,45 +5,6 @@ using Rocket.API;
 
 namespace coolpuppy24.commandlogger
 {
-	// This is yours old configuration. Check out new one below.
-
-    //public class CommandLoggerConfiguration : Rocket.API.IRocketPluginConfiguration
-    //{
-    //    public bool LogVanishCommand;
-    //    public bool LogICommand;
-    //    public bool LogGiveCommand;
-    //    public bool LogGodCommand;
-    //    public bool LogVCommand;
-    //    public bool LogVehicleCommand;
-    //    public bool LogItemCommand;
-    //    public bool LogTPCommand;
-    //    public bool LogTeleportCommand;
-    //    public bool LogSpyCommand;
-    //    public bool LogTPHereCommand;
-    //    public bool LogInvestigateCommand;
-    //    public bool LogKillCommand;
-    //    public bool LogBanCommand;
-    //    public bool LogKickCommand;
-
-    //    public void LoadDefaults()
-    //    {
-    //        LogVanishCommand = true;
-    //        LogICommand = true;
-    //        LogGiveCommand = true;
-    //        LogGodCommand = true;
-    //        LogVCommand = true;
-    //        LogVehicleCommand = true;
-    //        LogItemCommand = true;
-    //        LogTPCommand = true;
-    //        LogTeleportCommand = true;
-    //        LogSpyCommand = true;
-    //        LogTPHereCommand = true;
-    //        LogInvestigateCommand = false;
-    //        LogKillCommand = true;
-    //        LogBanCommand = true;
-    //        LogKickCommand = true;
-    //    }
-    //}
 	public struct CommandLoggerEntry
 	{
 		/// <summary>
@@ -79,7 +40,7 @@ namespace coolpuppy24.commandlogger
 
 		public void LoadDefaults()
 		{
-			this.LogFormat = "[{0}] {1} ({2}) executed \"{3}\" command as \"{4}\"";
+			this.LogFormat = "[{0}] {1} ({2}) executed \"{3}\" command as \"{4}\" with \"{5}\" arguments.";
 			this.Entries = new CommandLoggerEntry[]
 			{
 				new CommandLoggerEntry("god"),

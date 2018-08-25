@@ -1,7 +1,7 @@
 # We're disabling useless for github folders
-bin/[Rr]elease/*
-bin/[Dd]ebug/*
-obj/*
-lib/*
+bin/[Rr]elease/
+bin/[Dd]ebug/
+obj/
+
 # Also visual studio folder
-.vs/*
+.vs/

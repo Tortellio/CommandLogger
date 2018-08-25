@@ -32,13 +32,15 @@ namespace coolpuppy24.commandlogger
 			// So, player entered the command and we'll deleting "/" letter from message.
 			message = message.Remove(0);
 			// Deleting command arguments bcuz we only need the command.
+			string[] args = message.Split(' ').Skip(1).ToArray();
+			// Set message to command name.
 			message = message.Split(' ')[0];
 
 			CommandLoggerEntry Entry = this.Configuration.Instance.Entries.Where(entry => entry.Name == message || entry.GetAliases().Contains(message)).FirstOrDefault();
 			if (Entry.Equals(default(CommandLoggerEntry)))
 				return;
 
-			this.Logger.Log(string.Format(this.Configuration.Instance.LogFormat, System.DateTime.Now, player.DisplayName, player.CSteamID.m_SteamID, Entry.Name, message));
+			this.Logger.Log(string.Format(this.Configuration.Instance.LogFormat, System.DateTime.Now, player.DisplayName, player.CSteamID.m_SteamID, Entry.Name, message, string.Join(" ", args)));
 		}
 		protected override void Unload()
 		{
