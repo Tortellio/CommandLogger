@@ -34,14 +34,5 @@ namespace coolpuppy24.commandlogger
 			if (this.m_filemode == FileMode.CreateNew)
 				this.m_filemode = FileMode.Append;
 		}
-		public void LogWarning(string Message)
-		{
-			if (!File.Exists(this.m_filepath))
-				this.m_filemode = FileMode.CreateNew;
-			using (StreamWriter sw = new StreamWriter(new FileStream(this.m_filepath, this.m_filemode, this.m_fileaccess)))
-				sw.WriteLine(Message);
-			if (this.m_filemode == FileMode.CreateNew)
-				this.m_filemode = FileMode.Append;
-		}
 	}
 }
