@@ -1,2 +1,0 @@
-C:\Users\Trevor\Desktop\Codies\Unturned\Unturned Plugins\CommandLogger\bin\Release\CommandLogger.dll
-C:\Users\Trevor\Desktop\Codies\Unturned\Unturned Plugins\CommandLogger\obj\Debug\CommandLogger.dll
