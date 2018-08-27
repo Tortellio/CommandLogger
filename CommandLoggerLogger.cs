@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Logger = Rocket.Core.Logging.Logger;
 
 namespace coolpuppy24.commandlogger
 {
@@ -12,7 +13,7 @@ namespace coolpuppy24.commandlogger
 		private FileAccess m_fileaccess;
 		public CommandLoggerLogger()
 		{
-			this.m_filepath = CommandLoggerCore.Instance.Directory + @"\Log.txt";
+			this.m_filepath = CommandLoggerCore.Instance.Directory + @"\CoolPuppy24.WisserTg.CommandLogger.log";
 
 			this.m_filemode = FileMode.Append;
 			this.m_fileaccess = FileAccess.Write;
@@ -20,19 +21,21 @@ namespace coolpuppy24.commandlogger
 		public CommandLoggerLogger(string FilePath) : this()
 		{
 			this.m_filepath = CommandLoggerCore.Instance.Directory + FilePath;
-
-			this.m_filemode = FileMode.Append;
-			this.m_fileaccess = FileAccess.Write;
 		}
 
 		public void Log(string Message)
 		{
-			if (!File.Exists(this.m_filepath))
-				this.m_filemode = FileMode.CreateNew;
-			using (StreamWriter sw = new StreamWriter(new FileStream(this.m_filepath, this.m_filemode, this.m_fileaccess)))
-				sw.WriteLine(Message);
-			if (this.m_filemode == FileMode.CreateNew)
-				this.m_filemode = FileMode.Append;
+			if (CommandLoggerCore.Instance.Configuration.Instance.LogToFile)
+			{
+				if (!File.Exists(this.m_filepath))
+					this.m_filemode = FileMode.CreateNew;
+				using (StreamWriter sw = new StreamWriter(new FileStream(this.m_filepath, this.m_filemode, this.m_fileaccess)))
+					sw.WriteLine(Message);
+				if (this.m_filemode == FileMode.CreateNew)
+					this.m_filemode = FileMode.Append;
+			}
+			if (CommandLoggerCore.Instance.Configuration.Instance.LogToConsole)
+				Logger.Log(Message);
 		}
 	}
 }
