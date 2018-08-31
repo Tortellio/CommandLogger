@@ -15,7 +15,7 @@ namespace coolpuppy24.commandlogger
 		{
 			CommandLoggerCore.Instance = this;
 			this.Logger = new CommandLoggerLogger();
-			RocketLogger.LogWarning("[CommandLogger] Made by: Coolpuppy24");
+			RocketLogger.LogWarning("[CommandLogger] Made by: Coopyy");
 			RocketLogger.LogWarning("[CommandLogger] Fork by: Wisser Tg");
 			RocketLogger.LogWarning("----------------------------------------------");
 
