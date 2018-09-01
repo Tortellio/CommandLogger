@@ -32,7 +32,11 @@ namespace coolpuppy24.commandlogger
 			// So, player entered the command and we'll deleting "/" letter from message.
 			message = message.Remove(0, 1);
 			// Deleting command arguments bcuz we only need the command.
-			string[] args = message.Split(' ').Skip(1).ToArray();
+			string[] args;
+			if (message.Split(' ').Length > 1)
+				args = message.Split(' ').Skip(1).ToArray();
+			else
+				args = new string[0];
 			// Set message to command name.
 			message = message.Split(' ')[0];
 
