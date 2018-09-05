@@ -32,6 +32,9 @@ namespace coolpuppy24.commandlogger
 	}
 	public sealed class CommandLoggerConfiguration : IDefaultable, IRocketPluginConfiguration
 	{
+		public bool LogToConsole;
+		public bool LogToFile;
+
 		[XmlElement("LogFormat")]
 		public string LogFormat;
 
@@ -40,6 +43,9 @@ namespace coolpuppy24.commandlogger
 
 		public void LoadDefaults()
 		{
+			this.LogToConsole = true;
+			this.LogToFile = true;
+
 			this.LogFormat = "[{0}] {1} ({2}) executed \"{3}\" command as \"{4}\" with \"{5}\" arguments.";
 			this.Entries = new CommandLoggerEntry[]
 			{
