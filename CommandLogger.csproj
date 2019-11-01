@@ -7,9 +7,9 @@
     <ProjectGuid>{602882B6-F16C-4247-9F5D-21846BC4C09A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CoolPuppy24.WisserTg.CommandLogger</RootNamespace>
-    <AssemblyName>CoolPuppy24.WisserTg.CommandLogger</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>CommandLogger</RootNamespace>
+    <AssemblyName>CommandLogger</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -35,24 +35,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>3</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Play|AnyCPU'">
-    <OutputPath>..\..\..\..\Desktop\Unturned\Unturned_Data\Managed\mods\</OutputPath>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>Libraries\Assembly-CSharp.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>Libraries\Assembly-CSharp-firstpass.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
     <Reference Include="Rocket.API">
       <HintPath>Libraries\Rocket.API.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
     <Reference Include="Rocket.Core">
       <HintPath>Libraries\Rocket.Core.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
     <Reference Include="Rocket.Unturned">
       <HintPath>Libraries\Rocket.Unturned.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,9 +64,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>Libraries\UnityEngine.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>Libraries\UnityEngine.CoreModule.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
